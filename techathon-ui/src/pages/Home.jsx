@@ -4,6 +4,7 @@ import Hero from "../components/Hero";
 import Games from "./Games";
 import About from "./About";
 import Sponsors from "./Sponsors";
+import Contact from "./Contact";
 // import Hero from "./Hero";
 // import MatrixBackground from "./MatrixBackground"; // optional canvas background if you use it
 
@@ -168,6 +169,7 @@ export default function Home() {
         <Games />
         <About />
         <Sponsors />
+        <Contact />
       </main>
     </div>
   );
