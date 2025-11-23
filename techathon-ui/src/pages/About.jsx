@@ -12,7 +12,7 @@ const EVENT_IMAGE = "VartakCollege.webp";
 
 export default function About() {
   return (
-    <section className="w-full py-12 px-6">
+    <section className="w-full py-12 relative z-20 px-6" id="about">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         {/* Left column: heading + content */}
         <div className="lg:col-span-7">

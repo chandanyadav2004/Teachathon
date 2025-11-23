@@ -144,7 +144,7 @@ export default function Games() {
   }
 
   return (
-    <div className="w-full py-5 px-6">
+    <div className="w-full relative z-20 pt-5 px-6" id="games">
       <div className="max-w-6xl mx-auto">
         {/* MAIN PAGE TITLE (CENTERED) */}
         <h1 className="text-3xl md:text-4xl font-mono text-green-300 text-center mb-10 tracking-wide">

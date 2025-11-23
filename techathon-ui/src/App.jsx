@@ -1,23 +1,34 @@
 import React from "react";
 import MatrixBackground from "./components/MatrixBackground";
+
 import Home from "./pages/Home";
-import Hero from "./components/Hero";
+import Games from "./pages/Games";
+import Sponsors from "./pages/Sponsors";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Footer from "./pages/Footer";
 
 export default function App() {
   return (
-    <div style={{ minHeight: "100vh", position: "relative", color: "#fff" }}>
-      {/* Background (automatically full screen, behind content) */}
-      {/* <MatrixBackground
-        padding={70}
-        fontSize={20}
-        speed={0.45}        // slower fall
-        color="#00ff55"     // green; change to any hex like '#aaf' etc.
-      /> */}
+    <>
+     
+        {/* Global Background → always visible */}
+        <MatrixBackground />
+        
 
-      <Home />
-      
+        {/* All Pages */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/games" element={<Games />} />
+          <Route path="/sponsors" element={<Sponsors />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
 
+        <Footer />
       
-    </div>
+    </>
   );
 }

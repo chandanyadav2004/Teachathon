@@ -32,7 +32,7 @@ export default function Sponsors({ sponsors }) {
   ];
 
   return (
-    <section className="w-full py-12 px-6">
+    <section className="w-full py-12 relative z-20 px-6" id="sponsors">
       <div className="max-w-6xl mx-auto relative z-20">
         {/* Title */}
         <h2 className="text-2xl md:text-3xl font-mono text-green-300 text-left mb-6">Sponsors</h2>

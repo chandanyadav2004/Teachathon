@@ -29,7 +29,7 @@ export default function Contact() {
   ];
 
   return (
-    <section className="w-full py-12 px-6">
+    <section className="w-full py-12 px-6  relative z-20" id="contact">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
 
         {/* LEFT: Google Map */}
