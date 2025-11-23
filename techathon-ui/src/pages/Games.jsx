@@ -26,82 +26,74 @@ const technicalEvents = [
   {
     id: "t1",
     name: "Blind Coding",
-    desc:
-      "Write correct and optimized code with no access to editor hints. Tests are hidden — focus on logic and speed.",
+    desc: "Write correct and optimized code with no access to editor hints. Tests are hidden — focus on logic and speed.",
     time: "09:00 AM — 11:00 AM",
     prize: "₹7,500",
     spots: 40,
-    image: CARD_IMG,
+    image: "./BlindCoding.png",
   },
   {
     id: "t2",
     name: "Website using AI",
-    desc:
-      "Build a small website that integrates a simple AI feature (chat, recommendation, or image generation). Creativity counts.",
+    desc: "Build a small website that integrates a simple AI feature (chat, recommendation, or image generation). Creativity counts.",
     time: "11:30 AM — 02:00 PM",
     prize: "₹12,000",
     spots: 30,
-    image: CARD_IMG,
+    image: "WebsiteAi.png",
   },
   {
     id: "t3",
     name: "Tech Quiz",
-    desc:
-      "Rapid-fire quiz covering programming, CS fundamentals and recent tech trends. Individual event — be quick and accurate.",
+    desc: "Rapid-fire quiz covering programming, CS fundamentals and recent tech trends. Individual event — be quick and accurate.",
     time: "02:30 PM — 03:30 PM",
     prize: "₹5,000",
     spots: 100,
-    image: CARD_IMG,
+    image: "TechQuiz.png",
   },
   {
     id: "t4",
     name: "Pitch the Idea",
-    desc:
-      "Present a tech idea in 3 minutes. Judging on feasibility, innovation and presentation. Teams of up to 3.",
+    desc: "Present a tech idea in 3 minutes. Judging on feasibility, innovation and presentation. Teams of up to 3.",
     time: "04:00 PM — 06:00 PM",
     prize: "₹20,000",
     spots: 20,
-    image: CARD_IMG,
+    image: "PitchTheIdea.png",
   },
   {
     id: "t5",
     name: "AI Art",
-    desc:
-      "Create AI-assisted artwork based on a theme. Judges will evaluate originality, aesthetics, and use of AI.",
+    desc: "Create AI-assisted artwork based on a theme. Judges will evaluate originality, aesthetics, and use of AI.",
     time: "06:30 PM — 08:00 PM",
     prize: "₹6,000",
     spots: 40,
-    image: CARD_IMG,
+    image: "AIArt.png",
   },
   {
     id: "t6",
     name: "Techathon (Project Sprint)",
-    desc:
-      "A short project sprint where teams prototype a working feature in a fixed time window. Best prototype wins.",
+    desc: "A short project sprint where teams prototype a working feature in a fixed time window. Best prototype wins.",
     time: "09:00 AM — 06:00 PM",
     prize: "₹30,000",
     spots: 25,
-    image: CARD_IMG,
+    image: "Techathon.png",
   },
   {
     id: "t7",
     name: "Debug Me",
-    desc:
-      "Given a buggy codebase, find and fix issues to make the test suite pass. Speed and correctness matter.",
+    desc: "Given a buggy codebase, find and fix issues to make the test suite pass. Speed and correctness matter.",
     time: "07:00 PM — 08:30 PM",
     prize: "₹8,000",
     spots: 30,
-    image: CARD_IMG,
+    image: "DebugMe.png",
   },
   {
     id: "t8",
     name: "Write Algorithms",
-    desc:
-      "Algorithmic problem solving with a focus on optimization and clever data structures. Multiple rounds.",
+    desc: "Algorithmic problem solving with a focus on optimization and clever data structures. Multiple rounds.",
     time: "08:45 PM — 10:30 PM",
     prize: "₹15,000",
     spots: 50,
-    image: CARD_IMG,
+    image: "WriteAlgorithm.png",
   },
 ];
 
@@ -109,22 +101,20 @@ const multiplayerGames = [
   {
     id: "g1",
     name: "BGMI",
-    desc:
-      "Battle Royale — form squads and survive to win. Team coordination and map knowledge are key.",
+    desc: "Battle Royale — form squads and survive to win. Team coordination and map knowledge are key.",
     time: "08:00 PM — 10:00 PM",
     prize: "₹12,000",
     playersNeeded: "Squad (4 players)",
-    image: CARD_IMG,
+    image: "BGMI.png",
   },
   {
     id: "g2",
     name: "Stumble Guys",
-    desc:
-      "Fun obstacle-course elimination rounds. Fast reflexes and occasional chaos — ideal for casual play.",
+    desc: "Fun obstacle-course elimination rounds. Fast reflexes and occasional chaos — ideal for casual play.",
     time: "07:00 PM — 08:30 PM",
     prize: "₹5,000",
     playersNeeded: "Free-for-all / small squads",
-    image: CARD_IMG,
+    image: "StumbleGuys.png",
   },
 ];
 
@@ -146,55 +136,63 @@ export default function Games() {
   function confirmApply() {
     const ticket = `T-${Math.floor(1000 + Math.random() * 9000)}`;
     alert(
-      `${applicantName || "Anonymous"} registered for ${selected.name}\nTime: ${selected.time}\nTicket: ${ticket}`
+      `${applicantName || "Anonymous"} registered for ${selected.name}\nTime: ${
+        selected.time
+      }\nTicket: ${ticket}`
     );
     closeModal();
   }
 
   return (
-    <div className="w-full py-12 px-6">
-    <div className="max-w-6xl mx-auto">
+    <div className="w-full py-5 px-6">
+      <div className="max-w-6xl mx-auto">
+        {/* MAIN PAGE TITLE (CENTERED) */}
+        <h1 className="text-3xl md:text-4xl font-mono text-green-300 text-center mb-10 tracking-wide">
+          Events & Games
+        </h1>
 
-      {/* MAIN PAGE TITLE (CENTERED) */}
-      <h1 className="text-3xl md:text-4xl font-mono text-green-300 text-center mb-10 tracking-wide">
-        Events
-      </h1>
-
-      {/* TECHNICAL EVENTS */}
-      <section className="mb-12">
-        <h2 className="text-2xl font-mono text-green-300 mb-4 text-left">
-          Technical Events
-        </h2>
+        {/* TECHNICAL EVENTS */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-mono text-green-300 mb-4 text-left">
+            Technical Events
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {technicalEvents.map((ev) => (
               <article
                 key={ev.id}
                 className="bg-black/40 border border-green-400/30 rounded-xl overflow-hidden flex flex-col"
               >
-                <div className="h-36 w-full overflow-hidden bg-black/20">
+                <div className="h-100 w-100 sm:w-[50px] sm:h-[50px] p-2 overflow-hidden bg-black/20">
                   <img
                     src={ev.image}
                     alt={ev.name}
-                    className="w-full h-full object-cover object-center opacity-90"
+                    className="w-full h-full transition-transform duration-300 hover:scale-125 object-cover object-center opacity-90"
                   />
                 </div>
-
                 <div className="p-5 flex-1 flex flex-col justify-between">
                   <div>
-                    <h3 className="font-mono text-lg text-green-200 font-semibold mb-2">{ev.name}</h3>
+                    <h3 className="font-mono text-lg text-green-200 font-semibold mb-2">
+                      {ev.name}
+                    </h3>
                     <p className="text-sm text-green-200/70 mb-3">{ev.desc}</p>
 
                     <div className="flex flex-wrap gap-3 text-xs text-green-100/80 mb-2">
                       <div className="flex items-center gap-2">
-                        <span className="font-mono text-xs text-green-300">⏱</span>
+                        <span className="font-mono text-xs text-green-300">
+                          ⏱
+                        </span>
                         <span>{ev.time}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <span className="font-mono text-xs text-green-300">🏆</span>
+                        <span className="font-mono text-xs text-green-300">
+                          🏆
+                        </span>
                         <span>{ev.prize}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <span className="font-mono text-xs text-green-300">👥</span>
+                        <span className="font-mono text-xs text-green-300">
+                          👥
+                        </span>
                         <span>{ev.spots} spots</span>
                       </div>
                     </div>
@@ -224,27 +222,41 @@ export default function Games() {
                 key={g.id}
                 className="bg-black/40 border border-green-400/30 rounded-xl overflow-hidden flex flex-col"
               >
-                <div className="h-36 w-full overflow-hidden bg-black/20">
-                  <img src={g.image} alt={g.name} className="w-full h-full object-cover object-center opacity-90" />
+                <div className="h-100 w-100 overflow-hidden bg-black/20">
+                  <img
+                    src={g.image}
+                    alt={g.name}
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-125 object-center opacity-90"
+                  />
                 </div>
 
                 <div className="p-5 flex-1 flex flex-col justify-between">
                   <div>
-                    <h3 className="font-mono text-lg text-green-200 font-semibold mb-2">{g.name}</h3>
+                    <h3 className="font-mono text-lg text-green-200 font-semibold mb-2">
+                      {g.name}
+                    </h3>
                     <p className="text-sm text-green-200/70 mb-3">{g.desc}</p>
 
                     <div className="flex flex-wrap gap-3 text-xs text-green-100/80 mb-2">
                       <div className="flex items-center gap-2">
-                        <span className="font-mono text-xs text-green-300">⏱</span>
+                        <span className="font-mono text-xs text-green-300">
+                          ⏱
+                        </span>
                         <span>{g.time}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <span className="font-mono text-xs text-green-300">🏆</span>
+                        <span className="font-mono text-xs text-green-300">
+                          🏆
+                        </span>
                         <span>{g.prize}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <span className="font-mono text-xs text-green-300">👥</span>
-                        <span className="whitespace-nowrap">{g.playersNeeded}</span>
+                        <span className="font-mono text-xs text-green-300">
+                          👥
+                        </span>
+                        <span className="whitespace-nowrap">
+                          {g.playersNeeded}
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -275,12 +287,18 @@ export default function Games() {
           <div className="w-full max-w-3xl bg-black/95 border border-green-400/30 rounded-lg overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-3">
               <div className="md:col-span-1 h-48 md:h-auto">
-                <img src={selected.image || CARD_IMG} alt={selected.name} className="w-full h-full object-cover" />
+                <img
+                  src={selected.image || CARD_IMG}
+                  alt={selected.name}
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               <div className="md:col-span-2 p-6">
                 <div className="flex items-start justify-between">
-                  <h3 className="font-mono text-xl text-green-200 font-semibold">{selected.name}</h3>
+                  <h3 className="font-mono text-xl text-green-200 font-semibold">
+                    {selected.name}
+                  </h3>
                   <button
                     onClick={closeModal}
                     className="text-green-200/60 hover:text-green-100 rounded p-1 focus:outline-none"
@@ -290,7 +308,9 @@ export default function Games() {
                   </button>
                 </div>
 
-                <p className="mt-3 text-green-200/80 text-sm">{selected.desc}</p>
+                <p className="mt-3 text-green-200/80 text-sm">
+                  {selected.desc}
+                </p>
 
                 <div className="mt-4 text-sm text-green-200/80 space-y-2">
                   <div>
@@ -311,7 +331,9 @@ export default function Games() {
                   )}
                   {"playersNeeded" in selected && (
                     <div>
-                      <span className="font-mono text-green-300">Players: </span>
+                      <span className="font-mono text-green-300">
+                        Players:{" "}
+                      </span>
                       {selected.playersNeeded}
                     </div>
                   )}
@@ -319,7 +341,9 @@ export default function Games() {
 
                 <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label className="text-green-200/80 text-sm font-mono">Name</label>
+                    <label className="text-green-200/80 text-sm font-mono">
+                      Name
+                    </label>
                     <input
                       value={applicantName}
                       onChange={(e) => setApplicantName(e.target.value)}
@@ -329,7 +353,9 @@ export default function Games() {
                   </div>
 
                   <div>
-                    <label className="text-green-200/80 text-sm font-mono">Contact (email or phone)</label>
+                    <label className="text-green-200/80 text-sm font-mono">
+                      Contact (email or phone)
+                    </label>
                     <input
                       value={contact}
                       onChange={(e) => setContact(e.target.value)}
