@@ -1,9 +1,5 @@
 import React, { useEffect, useRef } from "react";
 
-/**
- * Full-screen matrix-like vertical rain background (canvas).
- * Props: padding, fontSize, speed, color
- */
 export default function MatrixBackground({
   padding = 70,
   fontSize = 20,
@@ -39,22 +35,19 @@ export default function MatrixBackground({
     fitCanvas();
     initDrops();
 
-    const charSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&*+-/<>".split(
-      ""
-    );
+    const charSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&*+-/<>".split("");
 
     function draw() {
       const w = canvas.clientWidth;
       const h = canvas.clientHeight;
 
-      // fade background slightly for tails
       ctx.fillStyle = "rgba(0,0,0,0.08)";
       ctx.fillRect(0, 0, w, h);
 
       ctx.fillStyle = color;
       ctx.font = `${fontSize}px monospace`;
       ctx.textBaseline = "top";
-      ctx.shadowColor = "transparent"; // no top haze
+      ctx.shadowColor = "transparent";
 
       for (let i = 0; i < dropsRef.current.length; i++) {
         const ch = charSet[Math.floor(Math.random() * charSet.length)];
@@ -62,7 +55,7 @@ export default function MatrixBackground({
         const y = dropsRef.current[i] * fontSize;
         ctx.fillText(ch, x, y);
 
-        dropsRef.current[i] += speed * (fontSize / 20); // scale speed by font
+        dropsRef.current[i] += speed * (fontSize / 20);
 
         if (y > h && Math.random() > 0.99) {
           dropsRef.current[i] = 0;
