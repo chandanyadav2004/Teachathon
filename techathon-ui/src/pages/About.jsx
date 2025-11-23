@@ -19,7 +19,7 @@ export default function About() {
           <h3 className="text-2xl font-mono text-green-300 mb-6">About Event</h3>
 
           {/* subtle divider */}
-          <div className="h-[1px] bg-green-400/10 mb-6" />
+          <div className="h-1 bg-green-400/10 mb-6" />
 
           <div className="text-green-200 font-mono">
             <h4 className="text-lg md:text-xl font-semibold mb-4">About Vartak College</h4>
