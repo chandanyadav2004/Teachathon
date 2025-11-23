@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import MatrixBackground from "../components/MatrixBackground";
 import Hero from "../components/Hero";
+import Games from "./Games";
 // import Hero from "./Hero";
 // import MatrixBackground from "./MatrixBackground"; // optional canvas background if you use it
 
@@ -162,24 +163,7 @@ export default function Home() {
       <main className="relative z-20">
         <Hero />
         {/* below hero you could add "game cards" or other sections — simplified sample */}
-        <section className="w-full flex justify-center px-4  pb-12">
-          <div className="w-full max-w-[1100px] grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="col-span-1 p-4 border border-green-400/20 rounded-md bg-black/30">
-              <div className="font-mono text-sm text-green-200 font-semibold mb-2">GAME ONE</div>
-              <p className="text-xs text-green-200/70">Description of the game.</p>
-            </div>
-
-            <div className="col-span-1 p-4 border border-green-400/20 rounded-md bg-black/30">
-              <div className="font-mono text-sm text-green-200 font-semibold mb-2">GAME TWO</div>
-              <p className="text-xs text-green-200/70">Description of the game.</p>
-            </div>
-
-            <div className="col-span-1 p-4 border border-green-400/20 rounded-md bg-black/30">
-              <div className="font-mono text-sm text-green-200 font-semibold mb-2">GAME THREE</div>
-              <p className="text-xs text-green-200/70">Description of access.</p>
-            </div>
-          </div>
-        </section>
+        <Games />
       </main>
     </div>
   );
