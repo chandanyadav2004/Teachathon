@@ -162,7 +162,7 @@ export default function Games() {
                 key={ev.id}
                 className="bg-black/40 border border-green-400/30 rounded-xl overflow-hidden flex flex-col"
               >
-                <div className="h-100 w-100 md:w-[300px] md:h-[400px] sm:w-[50px] sm:h-[50px] p-2 overflow-hidden bg-black/20">
+                <div className="h-100 w-100 overflow-hidden bg-black/20">
                   <img
                     src={ev.image}
                     alt={ev.name}
