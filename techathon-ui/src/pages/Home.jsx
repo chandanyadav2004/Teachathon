@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import MatrixBackground from "../components/MatrixBackground";
 import Hero from "../components/Hero";
 import Games from "./Games";
+import About from "./About";
 // import Hero from "./Hero";
 // import MatrixBackground from "./MatrixBackground"; // optional canvas background if you use it
 
@@ -164,6 +165,7 @@ export default function Home() {
         <Hero />
         {/* below hero you could add "game cards" or other sections — simplified sample */}
         <Games />
+        <About />
       </main>
     </div>
   );
