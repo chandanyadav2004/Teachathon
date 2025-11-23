@@ -14,10 +14,11 @@ export default function App() {
         color="#00ff55"     // green; change to any hex like '#aaf' etc.
       />
 
+      <Home />
       
 
       <div className="relative z-20">
-        <Home />
+        
         <Hero />
         {/* Add additional content here */}
       </div>
