@@ -7,21 +7,16 @@ export default function App() {
   return (
     <div style={{ minHeight: "100vh", position: "relative", color: "#fff" }}>
       {/* Background (automatically full screen, behind content) */}
-      <MatrixBackground
+      {/* <MatrixBackground
         padding={70}
         fontSize={20}
         speed={0.45}        // slower fall
         color="#00ff55"     // green; change to any hex like '#aaf' etc.
-      />
+      /> */}
 
       <Home />
       
 
-      <div className="relative z-20">
-        
-        <Hero />
-        {/* Add additional content here */}
-      </div>
       
     </div>
   );
