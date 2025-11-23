@@ -50,12 +50,12 @@ export default function Contact() {
           </div>
 
           <div className="mt-6 text-green-200/80 font-mono">
-            <p className="mb-2">XYZ College of Engineering</p>
-            <p className="text-sm mb-1">123 Technology Lane, Silicon District, City — 123456</p>
+            <p className="mb-2">Vartak  College </p>
+            <p className="text-sm mb-1">Shastri Nagar, Vishal Nagar, Vasai West, Vasai-Virar, Maharashtra 401202</p>
             <p className="text-sm">
               Email:{" "}
-              <a href="mailto:info@xyzcollege.edu" className="text-green-200 hover:underline">
-                info@xyzcollege.edu
+              <a href="mailto:t23.avcollege@avc.ac.in" className="text-green-200 hover:underline">
+               t23.avcollege@avc.ac.in
               </a>
             </p>
           </div>
