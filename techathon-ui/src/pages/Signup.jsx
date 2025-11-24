@@ -159,7 +159,7 @@ export default function Signup() {
 
 
     <div
-      className="min-h-screen flex items-center justify-center bg-black text-green-200 px-4"
+      className="min-h-screen flex items-center sm:mt-10 justify-center bg-black text-green-200 px-4"
       style={{
         backgroundImage: `url(${BG_IMG})`,
         backgroundSize: "cover",

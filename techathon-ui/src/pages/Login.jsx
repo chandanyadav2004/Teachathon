@@ -168,7 +168,7 @@ export default function Login() {
       {/* ---------- LOGIN SECTION ---------- */}
       <div
         id="login"
-        className="min-h-screen flex items-center justify-center bg-black text-green-200"
+        className="min-h-screen flex items-center justify-center bg-black text-green-200 sm:mt-10" 
         style={{
           // subtle background texture using your uploaded file
           backgroundImage: `url(${BG_IMG})`,
