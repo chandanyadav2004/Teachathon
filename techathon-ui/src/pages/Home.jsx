@@ -10,7 +10,7 @@ import Footer from "./Footer";
 const OVERLAY_IMG = "/mnt/data/c86c9975-8809-4a4a-9533-635312aec55a.png";
 
 export default function Home() {
-  const nav = ["Home", "Games", "Sponsors", "About", "Contact", 'Login/SignUp'];
+  const nav = ["Home", "Games", "Sponsors", "About", "Contact"];
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -101,9 +101,17 @@ export default function Home() {
   }, []); // run once on mount
 
   return (
-    <div className="min-h-screen mt-8 ms:mt-0 lg:mt-2 bg-black relative overflow-hidden text-green-200" id="home">
+    <div
+      className="min-h-screen mt-8  sm:mt-0 lg:mt-2 bg-black relative overflow-hidden text-green-200"
+      id="home"
+    >
       {/* optional animated matrix background (uncomment if you have MatrixBackground) */}
-      <MatrixBackground padding={70} fontSize={18} speed={0.35} color="#003300" />
+      <MatrixBackground
+        padding={70}
+        fontSize={18}
+        speed={0.35}
+        color="#003300"
+      />
 
       {/* decorative overlay texture — keeps the matrix feel from your mockups */}
       <img
@@ -117,7 +125,9 @@ export default function Home() {
         <div
           className={`mx-auto max-w-[1100px] w-[calc(100%-1rem)] flex items-center justify-between
             px-4 py-3 rounded-b-xl backdrop-blur-md transition-all ${
-              scrolled ? "bg-black/40 border border-green-400/40 shadow-lg" : "bg-black/30 border border-green-400/30"
+              scrolled
+                ? "bg-black/40 border border-green-400/40 shadow-lg"
+                : "bg-black/30 border border-green-400/30"
             }`}
         >
           <div className="flex items-center gap-3">
@@ -125,9 +135,16 @@ export default function Home() {
               <div className="px-2 py-1 rounded-md border border-green-300/10 flex items-center">
                 <span className="text-green-200 font-bold">&gt;_</span>
               </div>
-              <a href="/#hero" className="text-base font-bold tracking-wide text-green-300">TECHATHON 2025</a>
+              <a
+                href="/#hero"
+                className="text-base font-bold tracking-wide text-green-300"
+              >
+                TECHATHON 2025
+              </a>
             </div>
-            <div className="sm:hidden text-green-300 font-medium font-mono">TECHATHON</div>
+            <div className="sm:hidden text-green-300 font-medium font-mono">
+              TECHATHON
+            </div>
           </div>
 
           {/* nav: visible on desktop (lg) */}
@@ -142,6 +159,18 @@ export default function Home() {
                 {n}
               </a>
             ))}
+            <a
+              href="/login"
+              className="text-green-300 hover:text-green-100 px-2 py-1 transition"
+            >
+              Login
+            </a>
+            <a
+              href="/signup"
+              className="text-green-300 hover:text-green-100 px-2 py-1 transition"
+            >
+              SignUp
+            </a>
           </nav>
 
           {/* hamburger: visible on tablet+mobile (below lg) */}
@@ -151,7 +180,12 @@ export default function Home() {
               aria-expanded={open}
               className="p-2 rounded-md border border-green-500/10 bg-black/20 text-green-200"
             >
-              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <svg
+                className="w-6 h-6"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden
+              >
                 <path
                   d={open ? "M6 18L18 6M6 6l12 12" : "M4 7h16M4 12h16M4 17h16"}
                   stroke="currentColor"
@@ -170,7 +204,9 @@ export default function Home() {
 
       {/* slide-over drawer for mobile & tablet (below lg) */}
       <div
-        className={`fixed inset-0 z-40 transition-opacity ${open ? "opacity-100 visible" : "opacity-0 invisible"}`}
+        className={`fixed inset-0 z-40 transition-opacity ${
+          open ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
         onClick={() => setOpen(false)}
         aria-hidden={!open}
         style={{ background: "rgba(0,0,0,0.5)" }}
@@ -182,8 +218,13 @@ export default function Home() {
         aria-hidden={!open}
       >
         <div className="flex items-center justify-between px-5 py-4 border-b border-green-400/10">
-          <div className="text-green-300 font-bold font-mono">TECHATHON 2025</div>
-          <button onClick={() => setOpen(false)} className="p-2 rounded-md border border-green-400/10">
+          <div className="text-green-300 font-bold font-mono">
+            TECHATHON 2025
+          </div>
+          <button
+            onClick={() => setOpen(false)}
+            className="p-2 rounded-md border border-green-400/10"
+          >
             ✕
           </button>
         </div>
@@ -200,13 +241,23 @@ export default function Home() {
             </a>
           ))}
 
+
           <div className="mt-4 border-t border-green-400/10 pt-4">
             <a
-              href="/#register"
+              href="/signup"
               onClick={() => setOpen(false)}
               className="block w-full text-center px-4 py-3 rounded-md border border-green-400/40 text-green-100"
             >
               Register
+            </a>
+          </div>
+          <div className="mt-4 border-t border-green-400/10 pt-4">
+            <a
+              href="/login"
+              onClick={() => setOpen(false)}
+              className="block w-full text-center px-4 py-3 rounded-md border border-green-400/40 text-green-100"
+            >
+              Login
             </a>
           </div>
         </nav>
@@ -222,9 +273,6 @@ export default function Home() {
         <Sponsors />
         <Contact />
       </main>
-        
-      
-     
     </div>
   );
 }

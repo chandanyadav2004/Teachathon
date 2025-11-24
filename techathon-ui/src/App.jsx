@@ -9,6 +9,8 @@ import Contact from "./pages/Contact";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./pages/Footer";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 
 export default function App() {
   return (
@@ -22,6 +24,9 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/games" element={<Games />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          
           <Route path="/sponsors" element={<Sponsors />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />

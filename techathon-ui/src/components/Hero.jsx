@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 /**
  * Hero.jsx (updated)
@@ -100,7 +101,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="w-full flex relative justify-center items-center px-4 py-10 my-50 lg:top-10 sm:my-1 md:my-20" >
+    <section className="w-full flex relative justify-center items-center lg:px-4 lg:py-10 lg:my-50 sm:p-0 lg:top-10 sm:m-0 md:my-20" >
       {/* You can optionally render the overlay image behind the hero (uncomment if needed) */}
       {/* <img src={OVERLAY_IMG} alt="" className="pointer-events-none absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-multiply" /> */}
 
@@ -133,13 +134,13 @@ export default function Hero() {
               >
                 Register Now
               </button>
-
-              <a href="#games"><button 
+                
+              <button  
                 className="w-full sm:w-auto px-6 py-3 rounded-md border border-green-400/40 text-green-100 font-medium
                            transition transform hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(0,255,150,0.12)] hover:ring-2 hover:ring-green-400/30"
               >
                 View Challenges
-              </button> </a>
+              </button>
             </div>
           </div>
         </div>
