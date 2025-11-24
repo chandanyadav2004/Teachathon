@@ -128,19 +128,22 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center md:items-start">
-              <button
+              <a href="/signup" ><button
                 className="w-full sm:w-auto px-6 py-3 rounded-md border border-green-400/50 text-green-100 font-medium
                            transition transform hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(0,255,150,0.12)] hover:ring-2 hover:ring-green-400/30"
               >
                 Register Now
               </button>
-                
+              </a>
+
+               <a href="/#games" >
               <button  
                 className="w-full sm:w-auto px-6 py-3 rounded-md border border-green-400/40 text-green-100 font-medium
                            transition transform hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(0,255,150,0.12)] hover:ring-2 hover:ring-green-400/30"
               >
                 View Challenges
               </button>
+              </a> 
             </div>
           </div>
         </div>
